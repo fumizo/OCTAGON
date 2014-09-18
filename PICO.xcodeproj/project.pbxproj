@@ -35,15 +35,12 @@
 		4F18931219ACEB3F009B15D0 /* ChangeRGB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18931119ACEB3F009B15D0 /* ChangeRGB.m */; };
 		4F18931619ACF4BD009B15D0 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F18931519ACF4BD009B15D0 /* icon.png */; };
 		4F18931A19ACF7C8009B15D0 /* octagon_gameover_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F18931919ACF7C8009B15D0 /* octagon_gameover_purple.png */; };
-		4F3C8583198622CB00E843AC /* Noctagon()2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3C8581198622CB00E843AC /* Noctagon()2.png */; };
 		4F3C85871986242200E843AC /* Noctagon_first.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3C85861986242200E843AC /* Noctagon_first.png */; };
-		4F3EE49A199B831700008B6A /* Gameover.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3EE499199B831700008B6A /* Gameover.png */; };
 		4F3EE49D199BAFA600008B6A /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3EE49C199BAFA600008B6A /* GameOverViewController.m */; };
 		4F3EE4AC199C43E700008B6A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3EE4AB199C43E700008B6A /* Social.framework */; };
 		4F4E357719719B0D00EE4F99 /* DMCrookedSwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4E357619719B0D00EE4F99 /* DMCrookedSwipeView.m */; };
 		4F82C64319B9CEDE00BB7895 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9F732E195D73290082669D /* CoreGraphics.framework */; };
 		4F82C64519B9CEEE00BB7895 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F82C64419B9CEEE00BB7895 /* QuartzCore.framework */; };
-		4F8C4C78199C958E00C375F4 /* pico_settei.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C4C77199C958E00C375F4 /* pico_settei.png */; };
 		4F8C4C92199C9B8800C375F4 /* lgp01a201304151300 のコピー.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C4C7A199C9B8800C375F4 /* lgp01a201304151300 のコピー.png */; };
 		4F8C4C93199C9B8800C375F4 /* lgp01a201304151300.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C4C7B199C9B8800C375F4 /* lgp01a201304151300.jpg */; };
 		4F8C4C94199C9B8800C375F4 /* lgp01a201304151400 のコピー.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C4C7C199C9B8800C375F4 /* lgp01a201304151400 のコピー.jpg */; };
@@ -91,8 +88,10 @@
 		4FAD09C319C9B93300BC2854 /* NmarumaruPink.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FAD09BF19C9B93300BC2854 /* NmarumaruPink.png */; };
 		4FAD09C419C9B93300BC2854 /* NmarumaruYellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FAD09C019C9B93300BC2854 /* NmarumaruYellow.png */; };
 		4FAD09C619C9B96900BC2854 /* octagon_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FAD09C519C9B96900BC2854 /* octagon_board.png */; };
-		4FB97DFF199B3ADD00BF12EF /* Noctagon().png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB97DFE199B3ADD00BF12EF /* Noctagon().png */; };
 		4FC7E85C19669E8C0069A919 /* OptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC7E85B19669E8C0069A919 /* OptionViewController.m */; };
+		4FD6C17D19C9C8CB00EB9704 /* HeaderImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD6C17C19C9C8CB00EB9704 /* HeaderImage.png */; };
+		4FD6C17F19C9C8E200EB9704 /* ForkImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD6C17E19C9C8E200EB9704 /* ForkImage.png */; };
+		4FD6C18119C9E95100EB9704 /* TestPanel3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FD6C18019C9E95100EB9704 /* TestPanel3.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,9 +124,9 @@
 		4F1892EE19AAD0EF009B15D0 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		4F1892F919AB13C2009B15D0 /* octagon_wood_label.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = octagon_wood_label.png; sourceTree = "<group>"; };
 		4F1892FB19AB13ED009B15D0 /* wood-white_texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wood-white_texture.jpg"; sourceTree = "<group>"; };
-		4F1892FD19AB1F9C009B15D0 /* kan_octagon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kan_octagon.mp3; sourceTree = "<group>"; };
-		4F1892FE19AB1F9C009B15D0 /* don_octagon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = don_octagon.mp3; sourceTree = "<group>"; };
-		4F1892FF19AB1F9C009B15D0 /* pon_octagon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pon_octagon.mp3; sourceTree = "<group>"; };
+		4F1892FD19AB1F9C009B15D0 /* kan_octagon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = kan_octagon.mp3; path = ../kan_octagon.mp3; sourceTree = "<group>"; };
+		4F1892FE19AB1F9C009B15D0 /* don_octagon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = don_octagon.mp3; path = ../don_octagon.mp3; sourceTree = "<group>"; };
+		4F1892FF19AB1F9C009B15D0 /* pon_octagon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = pon_octagon.mp3; path = ../pon_octagon.mp3; sourceTree = "<group>"; };
 		4F18930319AB25B3009B15D0 /* shu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shu.png; sourceTree = "<group>"; };
 		4F18930519AB25FE009B15D0 /* shu_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shu_white.png; sourceTree = "<group>"; };
 		4F18930B19AB2E8A009B15D0 /* octagon_option_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = octagon_option_icon.png; sourceTree = "<group>"; };
@@ -136,16 +135,13 @@
 		4F18931119ACEB3F009B15D0 /* ChangeRGB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeRGB.m; sourceTree = "<group>"; };
 		4F18931519ACF4BD009B15D0 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		4F18931919ACF7C8009B15D0 /* octagon_gameover_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = octagon_gameover_purple.png; sourceTree = "<group>"; };
-		4F3C8581198622CB00E843AC /* Noctagon()2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Noctagon()2.png"; sourceTree = "<group>"; };
 		4F3C85861986242200E843AC /* Noctagon_first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Noctagon_first.png; sourceTree = "<group>"; };
-		4F3EE499199B831700008B6A /* Gameover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gameover.png; sourceTree = "<group>"; };
 		4F3EE49B199BAFA600008B6A /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
 		4F3EE49C199BAFA600008B6A /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
 		4F3EE4AB199C43E700008B6A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		4F4E357519719B0D00EE4F99 /* DMCrookedSwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMCrookedSwipeView.h; sourceTree = "<group>"; };
 		4F4E357619719B0D00EE4F99 /* DMCrookedSwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMCrookedSwipeView.m; sourceTree = "<group>"; };
 		4F82C64419B9CEEE00BB7895 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		4F8C4C77199C958E00C375F4 /* pico_settei.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pico_settei.png; sourceTree = "<group>"; };
 		4F8C4C7A199C9B8800C375F4 /* lgp01a201304151300 のコピー.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lgp01a201304151300 のコピー.png"; sourceTree = "<group>"; };
 		4F8C4C7B199C9B8800C375F4 /* lgp01a201304151300.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lgp01a201304151300.jpg; sourceTree = "<group>"; };
 		4F8C4C7C199C9B8800C375F4 /* lgp01a201304151400 のコピー.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lgp01a201304151400 のコピー.jpg"; sourceTree = "<group>"; };
@@ -197,10 +193,12 @@
 		4FAD09BF19C9B93300BC2854 /* NmarumaruPink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NmarumaruPink.png; sourceTree = "<group>"; };
 		4FAD09C019C9B93300BC2854 /* NmarumaruYellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NmarumaruYellow.png; sourceTree = "<group>"; };
 		4FAD09C519C9B96900BC2854 /* octagon_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = octagon_board.png; sourceTree = "<group>"; };
-		4FB97DFE199B3ADD00BF12EF /* Noctagon().png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Noctagon().png"; sourceTree = "<group>"; };
 		4FC7E85019659E2E0069A919 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4FC7E85A19669E8C0069A919 /* OptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionViewController.h; sourceTree = "<group>"; };
 		4FC7E85B19669E8C0069A919 /* OptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionViewController.m; sourceTree = "<group>"; };
+		4FD6C17C19C9C8CB00EB9704 /* HeaderImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeaderImage.png; sourceTree = "<group>"; };
+		4FD6C17E19C9C8E200EB9704 /* ForkImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ForkImage.png; sourceTree = "<group>"; };
+		4FD6C18019C9E95100EB9704 /* TestPanel3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestPanel3.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +259,9 @@
 		4F1892DC19AA6539009B15D0 /* octagonSounds */ = {
 			isa = PBXGroup;
 			children = (
+				4F1892FD19AB1F9C009B15D0 /* kan_octagon.mp3 */,
+				4F1892FE19AB1F9C009B15D0 /* don_octagon.mp3 */,
+				4F1892FF19AB1F9C009B15D0 /* pon_octagon.mp3 */,
 				4F1892DD19AA6539009B15D0 /* bell01.mp3 */,
 				4F1892DE19AA6539009B15D0 /* dodon02.mp3 */,
 				4F1892DF19AA6539009B15D0 /* flee1.mp3 */,
@@ -327,17 +328,17 @@
 		4F9F7320195D73290082669D = {
 			isa = PBXGroup;
 			children = (
-				4FAD09C519C9B96900BC2854 /* octagon_board.png */,
+				4FD6C18019C9E95100EB9704 /* TestPanel3.xib */,
+				4FD6C17E19C9C8E200EB9704 /* ForkImage.png */,
+				4FD6C17C19C9C8CB00EB9704 /* HeaderImage.png */,
 				4FAD09BC19C9B93300BC2854 /* octagon_maru */,
+				4FAD09C519C9B96900BC2854 /* octagon_board.png */,
 				4F18931919ACF7C8009B15D0 /* octagon_gameover_purple.png */,
 				4F18931519ACF4BD009B15D0 /* icon.png */,
 				4F18930D19AB30A4009B15D0 /* octagon_hantoumei.png */,
 				4F18930B19AB2E8A009B15D0 /* octagon_option_icon.png */,
 				4F18930519AB25FE009B15D0 /* shu_white.png */,
 				4F18930319AB25B3009B15D0 /* shu.png */,
-				4F1892FD19AB1F9C009B15D0 /* kan_octagon.mp3 */,
-				4F1892FE19AB1F9C009B15D0 /* don_octagon.mp3 */,
-				4F1892FF19AB1F9C009B15D0 /* pon_octagon.mp3 */,
 				4F1892FB19AB13ED009B15D0 /* wood-white_texture.jpg */,
 				4F1892F919AB13C2009B15D0 /* octagon_wood_label.png */,
 				4F9F7332195D73290082669D /* PICO */,
@@ -377,11 +378,7 @@
 				4F1892DC19AA6539009B15D0 /* octagonSounds */,
 				4F1892D319AA55C2009B15D0 /* icons */,
 				4F8C4C79199C9B8700C375F4 /* pic4pico */,
-				4F3EE499199B831700008B6A /* Gameover.png */,
 				4F3C85861986242200E843AC /* Noctagon_first.png */,
-				4F8C4C77199C958E00C375F4 /* pico_settei.png */,
-				4FB97DFE199B3ADD00BF12EF /* Noctagon().png */,
-				4F3C8581198622CB00E843AC /* Noctagon()2.png */,
 				4F9F733B195D73290082669D /* AppDelegate.h */,
 				4F9F733C195D73290082669D /* AppDelegate.m */,
 				4F9F733E195D73290082669D /* Main.storyboard */,
@@ -529,12 +526,10 @@
 				4FAD09C319C9B93300BC2854 /* NmarumaruPink.png in Resources */,
 				4FAD09C619C9B96900BC2854 /* octagon_board.png in Resources */,
 				4FAD09C219C9B93300BC2854 /* NmarumaruGreen.png in Resources */,
-				4F3EE49A199B831700008B6A /* Gameover.png in Resources */,
 				4F8C4CA6199C9B8800C375F4 /* res_90131049.png in Resources */,
 				4F1892E619AA6539009B15D0 /* bell01.mp3 in Resources */,
 				4F8C4CAF199D981400C375F4 /* octagonHaikei.png in Resources */,
 				4F18930419AB25B3009B15D0 /* shu.png in Resources */,
-				4F8C4C78199C958E00C375F4 /* pico_settei.png in Resources */,
 				4F8C4C9C199C9B8800C375F4 /* lgp01a201403010300 のコピー.png in Resources */,
 				4F1892EA19AA6539009B15D0 /* kannn.mp3 in Resources */,
 				4F8C4CA5199C9B8800C375F4 /* YellowAndPink.png in Resources */,
@@ -566,20 +561,21 @@
 				4F18930019AB1F9C009B15D0 /* kan_octagon.mp3 in Resources */,
 				4F8C4C96199C9B8800C375F4 /* lgp01a201304151900 のコピー.png in Resources */,
 				4F1892E719AA6539009B15D0 /* dodon02.mp3 in Resources */,
+				4FD6C17D19C9C8CB00EB9704 /* HeaderImage.png in Resources */,
 				4F1892CC19A78014009B15D0 /* res_177918524.png in Resources */,
 				4F18930E19AB30A4009B15D0 /* octagon_hantoumei.png in Resources */,
 				4F18931A19ACF7C8009B15D0 /* octagon_gameover_purple.png in Resources */,
-				4F3C8583198622CB00E843AC /* Noctagon()2.png in Resources */,
 				4F18930119AB1F9C009B15D0 /* don_octagon.mp3 in Resources */,
 				4F18930C19AB2E8A009B15D0 /* octagon_option_icon.png in Resources */,
 				4F1892E819AA6539009B15D0 /* flee1.mp3 in Resources */,
 				4F1892EB19AA6539009B15D0 /* N_don01.mp3 in Resources */,
-				4FB97DFF199B3ADD00BF12EF /* Noctagon().png in Resources */,
+				4FD6C18119C9E95100EB9704 /* TestPanel3.xib in Resources */,
 				4F18931619ACF4BD009B15D0 /* icon.png in Resources */,
 				4F8C4C94199C9B8800C375F4 /* lgp01a201304151400 のコピー.jpg in Resources */,
 				4FAC6B0219ADBBCB001A8DE7 /* octagon_icon120.png in Resources */,
 				4F1892FC19AB13ED009B15D0 /* wood-white_texture.jpg in Resources */,
 				4F8C4CA0199C9B8800C375F4 /* octagon_haguruma.png in Resources */,
+				4FD6C17F19C9C8E200EB9704 /* ForkImage.png in Resources */,
 				4F1892EC19AA6539009B15D0 /* N_kannn.mp3 in Resources */,
 				4F1892DB19AA5BC9009B15D0 /* octagon_sound_off.png in Resources */,
 				4F18930219AB1F9C009B15D0 /* pon_octagon.mp3 in Resources */,

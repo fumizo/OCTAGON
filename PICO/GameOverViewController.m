@@ -38,16 +38,7 @@
     // Do any additional setup after loading the view.
     NSLog(@"受け渡されたscoreは%d",score);
     NSLog(@"level is %d幕",level);
-    
-    
-    /*
-    //high scoreの入れ物
-    userDefaultsHighScore = [NSUserDefaults standardUserDefaults];
-    // int型で取得
-    highScore = [userDefaultsHighScore integerForKey:@"HIGHSCORE"];
-    // Int型で保存
-    [userDefaultsHighScore setInteger:1 forKey:@"HIGHSCORE"];
-     */
+//    highScore = 0;
     
 
     gameScoreLabel.text = [NSString stringWithFormat:@"%d",score];
@@ -80,37 +71,35 @@
     
 }
 
+- (void) highScore{
+    
+    //スコアが今までのハイスコアよりも大きかったら、ハイスコアに保存する。
+    if (score > highScore){
+        
+        NSLog(@"ハイスコアが更新されたよ");
+        
+        //high scoreの入れ物
+        userDefaultsHighScore = [NSUserDefaults standardUserDefaults];
+        // Int型で保存
+        [userDefaultsHighScore setInteger:score forKey:@"HIGHSCORE"];
+        // int型で取得
+        highScore = (int)[userDefaultsHighScore integerForKey:@"HIGHSCORE"];
+        // 保存する
+        [userDefaultsHighScore synchronize];
+        
+        highScoreLabel.text = [NSString stringWithFormat:@"%d",highScore];
+    }
+    
+
+    
+}
+
 
 -(void)viewWillAppear:(BOOL)animated{
-//    //    キャプチャする範囲の指定
-//    CGRect rect = CGRectMake(74, 74, 320, 394);
-//    
-//    UIGraphicsBeginImageContext(rect.size);
-//    
-//    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
-//    capture = UIGraphicsGetImageFromCurrentImageContext();
-//    
-//    UIGraphicsEndImageContext();
-//    
-//    //    キャプチャした画像の範囲
-//    UIImageWriteToSavedPhotosAlbum(capture, nil, nil, nil);
-//    UIGraphicsEndImageContext();
     
-    /*
-    //gamecenter 画面を読み込む
-    [self authenticateLocalPlayer];
+    NSLog(@"high score is...%d",highScore);
+    [self highScore];
     
-    //if文でGameCenterにログインしているかどうか確認してログインしていればスコアを送信する
-    if ([GKLocalPlayer localPlayer].isAuthenticated) {
-        GKScore* score = [[GKScore alloc] initWithLeaderboardIdentifier:@"octagonjp"];
-        score.value = score;
-        [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
-            if (error) {
-                // エラーの場合
-            }
-        }];
-    }
-     */
     
     if (score < 10 ) {
     }else if (score >= 10 && score <=20) {
@@ -151,7 +140,6 @@
     
     [flee play];
     
-    
     //    キャプチャする範囲の指定
     CGRect rect = CGRectMake(0, 287, 320, 226);
     
@@ -171,10 +159,8 @@
     //投稿する文章
     [twitterPostVC setInitialText:[NSString stringWithFormat:@"I WAS %dしゅ! #OCTAGON_JP \n %@ \n https://itunes.apple.com/jp/app/octagon-wanwo-shi-fenkerushuttingugemu/id913077665?mt=8",score,coment]];
     [twitterPostVC addImage:capture];
-    
-//    //alertだす
-//    UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"お知らせ" message:@"TWEETすたよ" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK!", nil];
-//    [alert show ];
+
+    //アラート
     [twitterPostVC setCompletionHandler:^ (SLComposeViewControllerResult result) {
         if(result == SLComposeViewControllerResultDone ){
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"投稿を完了しました！" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
@@ -210,10 +196,10 @@
     //gamecenter 画面を読み込む
     [self authenticateLocalPlayer];
     
-    //if文でGameCenterにログインしているかどうか確認してログインしていればスコアを送信する
-    if ([GKLocalPlayer localPlayer].isAuthenticated) {
+    //if文でGameCenterにログインしているかどうか確認してログインしていればハイスコアを送信する
+    if ([GKLocalPlayer localPlayer].isAuthenticated ) {
         GKScore* score2 = [[GKScore alloc] initWithLeaderboardIdentifier:@"octagonjp"];
-        score2.value = score;
+        score2.value = highScore;
         [GKScore reportScores:@[score2] withCompletionHandler:^(NSError *error) {
             if (error) {
                 // エラーの場合

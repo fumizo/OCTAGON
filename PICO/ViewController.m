@@ -85,7 +85,7 @@
 
 }
 
-
+/*==チュートリアル==*/
 /*
 - (void) tutorial{
     //ヘッダービューを作成
@@ -112,6 +112,7 @@
     [panel3 buildPanelWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
 }
 */
+
 
 
 -(void)viewWillAppear:(BOOL)animated{

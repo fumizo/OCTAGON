@@ -28,10 +28,13 @@
 
     BOOL isSound;
     
+    //ハイスコアの管理
     NSUserDefaults *userDefaultsHighScore;
     int highScore;
     
     NSString *coment;
+    
+    IBOutlet UILabel *highScoreLabel;
 }
 
 
