@@ -78,25 +78,25 @@
         
         NSLog(@"ハイスコアが更新されたよ");
         
+        highScore = score;
+        
         //high scoreの入れ物
         userDefaultsHighScore = [NSUserDefaults standardUserDefaults];
         // Int型で保存
-        [userDefaultsHighScore setInteger:score forKey:@"HIGHSCORE"];
-        // int型で取得
-        highScore = (int)[userDefaultsHighScore integerForKey:@"HIGHSCORE"];
+        [userDefaultsHighScore setInteger:highScore forKey:@"HIGHSCORE"];
+        
         // 保存する
         [userDefaultsHighScore synchronize];
         
         highScoreLabel.text = [NSString stringWithFormat:@"%d",highScore];
     }
-    
-
-    
 }
 
 
 -(void)viewWillAppear:(BOOL)animated{
     
+    // int型で取得
+    highScore = (int)[userDefaultsHighScore integerForKey:@"HIGHSCORE"];
     NSLog(@"high score is...%d",highScore);
     [self highScore];
     
