@@ -32,7 +32,7 @@
     userDefaultSounds = [NSUserDefaults standardUserDefaults];
     // int型で取得
     isSound = [userDefaultSounds integerForKey:@"sound"];
-    NSLog(@"bool sound %d",isSound);
+    NSLog(@"bool sounds %d",isSound);
     
     if(isSound == YES){
         buttonImg = [UIImage imageNamed:@"octagon_sound_on.png"];  // ボタンにする画像を生成する
@@ -48,6 +48,7 @@
                      action:@selector(sound:) forControlEvents:UIControlEventTouchUpInside];
         soundButtonOFF.frame = CGRectMake(200, 71, 84, 84);   //位置、大きさ
     [self.view addSubview:soundButtonOFF];
+    
     
     NSString *donPath = [[NSBundle mainBundle] pathForResource:@"N_don01" ofType:@"mp3"] ;
     NSURL *donUrl = [NSURL fileURLWithPath:donPath] ;
@@ -81,18 +82,12 @@
         // 保存する
         [userDefaultSounds synchronize];
         
-        volume = 0;
-        NSLog(@"オプションの画面で音量は...%d",volume);
-        
         buttonImg = [UIImage imageNamed:@"octagon_sound_off.png"];  // ボタンにする画像を生成する
         [soundButtonOFF setBackgroundImage:buttonImg forState:UIControlStateNormal];  // 画像をセットする
-        [self.delegate volumeDown:volume];
+//        [self.delegate volumeDown:volume];
         isSound = NO;
         
     }else if (isSound == NO){
-        volume = 1;
-        NSLog(@"オプションの画面で音量は...%d",volume);
-        
         // Bool型で保存
         [userDefaultSounds setBool:YES forKey:@"sound"];
         // 保存する
@@ -100,7 +95,7 @@
         
         buttonImg = [UIImage imageNamed:@"octagon_sound_on.png"];  // ボタンにする画像を生成する
         [soundButtonOFF setBackgroundImage:buttonImg forState:UIControlStateNormal];  // 画像をセットする
-        [self.delegate volumeDown:volume];
+//        [self.delegate volumeDown:volume];
         isSound = YES;
         [don play];
     }
@@ -113,7 +108,6 @@
 //画面遷移の直前に呼ばれる
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
 }
 
 

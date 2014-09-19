@@ -18,13 +18,16 @@
 
 @end
 @implementation ViewController
-@synthesize volume;
+//@synthesize volume;
 
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    [self volume];
     
     //[self tutorial]; //チュートリアル
     
@@ -116,6 +119,7 @@
 
 
 -(void)viewWillAppear:(BOOL)animated{
+    [self volume];
     
     [gameoverView removeFromSuperview];
     
@@ -698,18 +702,14 @@ swipeView.alpha = 0.0;
     //オプションのビューにIDをつけて、移動する。オプションさんって言う人がいますよ。この人がオプションさんですよ。オプションさんにtびますよ。
 }
 
--(void)sound:(NSNotification *)center{
-    //isSound = NO;
-}
 
-
--(void)volumeDown:(int)volume2{
+-(void)volume{
     NSUserDefaults *userDefaultSounds= [NSUserDefaults standardUserDefaults];
     
     // BOOL型で取得
-    sounds = [userDefaultSounds boolForKey:@"sound"];
-    NSLog(@"受け取ったvolume is...%d",sounds);
-    if(sounds == YES){
+    isSound = [userDefaultSounds boolForKey:@"sound"];
+
+    if(isSound == YES){
         tirin.volume *= 1;
         don.volume *= 1;
         dodon.volume *= 1;
@@ -721,14 +721,6 @@ swipeView.alpha = 0.0;
         dodon.volume *= 0;
         pon.volume *= 0;
         kan.volume *= 0;
-        
-    }
-    
-    NSLog(@"ゲーム画面でのvolume is...%d",volume2);
-    if(volume2 == 0){
-    //gameoverのviewに音はなしになったよの通知を送る
-    NSNotification *sound = [NSNotification notificationWithName:@"sound" object:self userInfo:nil];
-    [[NSNotificationCenter defaultCenter] postNotification:sound];
     }
 }
 

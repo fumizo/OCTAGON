@@ -66,8 +66,11 @@
     [[NSNotificationCenter defaultCenter] postNotification:sound];
 
      */
-    
-   [gooon play];
+    [self volume];[gooon play];
+    if (sounds == true) {
+        [gooon play];
+    }
+   
     
 }
 

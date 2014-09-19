@@ -17,7 +17,7 @@
 
 @interface OptionViewController : UIViewController{
     
-    int volume ;
+//    int volume ;
     BOOL isSound;
     
     UIButton *soundButtonOFF;
