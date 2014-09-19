@@ -90,8 +90,8 @@
 @property(nonatomic) int volume;
 
 
-//@end
-//@interface userDefaultSounds: NSUserDefaults;
-//@property BOOL sounds;
+@end
+@interface userDefaultSounds: NSUserDefaults;
+@property BOOL sounds;
 
 @end

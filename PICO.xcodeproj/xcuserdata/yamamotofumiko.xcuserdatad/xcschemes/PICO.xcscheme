@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4F9F7328195D73290082669D"
-               BuildableName = "PICO.xctest"
+               BuildableName = "PICO.PICO"
                BlueprintName = "PICO"
                ReferencedContainer = "container:PICO.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4F9F7328195D73290082669D"
-            BuildableName = "PICO.xctest"
+            BuildableName = "PICO.PICO"
             BlueprintName = "PICO"
             ReferencedContainer = "container:PICO.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4F9F7328195D73290082669D"
-            BuildableName = "PICO.xctest"
+            BuildableName = "PICO.PICO"
             BlueprintName = "PICO"
             ReferencedContainer = "container:PICO.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4F9F7328195D73290082669D"
-            BuildableName = "PICO.xctest"
+            BuildableName = "PICO.PICO"
             BlueprintName = "PICO"
             ReferencedContainer = "container:PICO.xcodeproj">
          </BuildableReference>

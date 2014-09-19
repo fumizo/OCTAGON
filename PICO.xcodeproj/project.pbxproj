@@ -168,7 +168,7 @@
 		4F8C4C91199C9B8800C375F4 /* tori.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tori.jpg; sourceTree = "<group>"; };
 		4F8C4CAE199D981400C375F4 /* octagonHaikei.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = octagonHaikei.png; path = ../PICO/octagonHaikei.png; sourceTree = "<group>"; };
 		4F8C4CB2199D9DE900C375F4 /* 旧icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "旧icon.png"; path = "../旧icon.png"; sourceTree = "<group>"; };
-		4F9F7329195D73290082669D /* PICO.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PICO.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F9F7329195D73290082669D /* PICO.PICO */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PICO.PICO; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9F732C195D73290082669D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4F9F732E195D73290082669D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4F9F7330195D73290082669D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -351,7 +351,7 @@
 		4F9F732A195D73290082669D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4F9F7329195D73290082669D /* PICO.xctest */,
+				4F9F7329195D73290082669D /* PICO.PICO */,
 				4F9F734A195D73290082669D /* PICOTests.xctest */,
 			);
 			name = Products;
@@ -455,7 +455,7 @@
 			);
 			name = PICO;
 			productName = PICO;
-			productReference = 4F9F7329195D73290082669D /* PICO.xctest */;
+			productReference = 4F9F7329195D73290082669D /* PICO.PICO */;
 			productType = "com.apple.product-type.application";
 		};
 		4F9F7349195D73290082669D /* PICOTests */ = {
@@ -744,7 +744,7 @@
 				INFOPLIST_FILE = "PICO/PICO-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6ada31ac-57e3-477b-bc1f-92a287d2661d";
-				WRAPPER_EXTENSION = xctest;
+				WRAPPER_EXTENSION = PICO;
 			};
 			name = Debug;
 		};
@@ -763,7 +763,7 @@
 				INFOPLIST_FILE = "PICO/PICO-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6ada31ac-57e3-477b-bc1f-92a287d2661d";
-				WRAPPER_EXTENSION = xctest;
+				WRAPPER_EXTENSION = PICO;
 			};
 			name = Release;
 		};

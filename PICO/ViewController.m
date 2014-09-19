@@ -702,17 +702,27 @@ swipeView.alpha = 0.0;
     //isSound = NO;
 }
 
+
 -(void)volumeDown:(int)volume2{
+    NSUserDefaults *userDefaultSounds= [NSUserDefaults standardUserDefaults];
     
-    NSLog(@"受け取ったvolume is...%d",volume2);
-    tirin.volume *= volume2;
-    don.volume *= volume2;
-    dodon.volume *= volume2;
-    pon.volume *= volume2;
-    kan.volume *= volume2;
-    
-//    // BOOL型で取得
-//    sounds = [userDefaultSounds boolForKey:nil];
+    // BOOL型で取得
+    sounds = [userDefaultSounds boolForKey:@"sound"];
+    NSLog(@"受け取ったvolume is...%d",sounds);
+    if(sounds == YES){
+        tirin.volume *= 1;
+        don.volume *= 1;
+        dodon.volume *= 1;
+        pon.volume *= 1;
+        kan.volume *= 1;
+    }else{
+        tirin.volume *= 0;
+        don.volume *= 0;
+        dodon.volume *= 0;
+        pon.volume *= 0;
+        kan.volume *= 0;
+        
+    }
     
     NSLog(@"ゲーム画面でのvolume is...%d",volume2);
     if(volume2 == 0){

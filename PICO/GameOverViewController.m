@@ -35,11 +35,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self volume]; //音
+    
     // Do any additional setup after loading the view.
     NSLog(@"受け渡されたscoreは%d",score);
     NSLog(@"level is %d幕",level);
-//    highScore = 0;
-    
 
     gameScoreLabel.text = [NSString stringWithFormat:@"%d",score];
     
@@ -80,6 +80,7 @@
         
         highScore = score;
         
+        
         //high scoreの入れ物
         userDefaultsHighScore = [NSUserDefaults standardUserDefaults];
         // Int型で保存
@@ -87,14 +88,13 @@
         
         // 保存する
         [userDefaultsHighScore synchronize];
-        
-        highScoreLabel.text = [NSString stringWithFormat:@"%d",highScore];
     }
+    highScoreLabel.text = [NSString stringWithFormat:@"%d",highScore];
 }
 
 
 -(void)viewWillAppear:(BOOL)animated{
-    
+    userDefaultsHighScore = [NSUserDefaults standardUserDefaults];
     // int型で取得
     highScore = (int)[userDefaultsHighScore integerForKey:@"HIGHSCORE"];
     NSLog(@"high score is...%d",highScore);
@@ -118,9 +118,22 @@
 
 }
 
+- (void)volume{
+    
+    NSUserDefaults *userDefaultSounds= [NSUserDefaults standardUserDefaults];
 
--(void)sound:(NSNotification *)center{
-    isSound = NO;
+    // BOOL型で取得
+    sounds = [userDefaultSounds boolForKey:@"sound"];
+    NSLog(@"結果画面でvolume is...%d",sounds);
+    if(sounds == YES){
+        pon.volume *= 1;
+        flee.volume *= 1;
+        gooon.volume *= 1;
+    }else{
+        pon.volume *= 0;
+        flee.volume *= 0;
+        gooon.volume *= 0;
+    }
 }
 
 -(IBAction)backToStart{

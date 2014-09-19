@@ -35,6 +35,9 @@
     NSString *coment;
     
     IBOutlet UILabel *highScoreLabel;
+    
+    BOOL sounds; //optionで保存したBOOL
+
 }
 
 

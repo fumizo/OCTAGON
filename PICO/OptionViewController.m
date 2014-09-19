@@ -29,11 +29,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     // AVAudioPlayerオブジェクトのボリュームは0.0〜1.0の間で指定する
-    volume = 1.0;
-    isSound = YES;
+    userDefaultSounds = [NSUserDefaults standardUserDefaults];
+    // int型で取得
+    isSound = [userDefaultSounds integerForKey:@"sound"];
+    NSLog(@"bool sound %d",isSound);
     
+    if(isSound == YES){
+        buttonImg = [UIImage imageNamed:@"octagon_sound_on.png"];  // ボタンにする画像を生成する
+        [soundButtonOFF setBackgroundImage:buttonImg forState:UIControlStateNormal];  // 画像をセットする
+    }else{
+        buttonImg = [UIImage imageNamed:@"octagon_sound_off.png"];  // ボタンにする画像を生成する
+        [soundButtonOFF setBackgroundImage:buttonImg forState:UIControlStateNormal];  // 画像をセットする
+    }
     
-    buttonImg = [UIImage imageNamed:@"octagon_sound_on.png"];  // ボタンにする画像を生成する
     soundButtonOFF = [UIButton buttonWithType:UIButtonTypeCustom];
     [soundButtonOFF setBackgroundImage:buttonImg forState:UIControlStateNormal];  // 画像をセットする
     [soundButtonOFF addTarget:self
@@ -44,8 +52,22 @@
     NSString *donPath = [[NSBundle mainBundle] pathForResource:@"N_don01" ofType:@"mp3"] ;
     NSURL *donUrl = [NSURL fileURLWithPath:donPath] ;
     don = [[AVAudioPlayer alloc] initWithContentsOfURL:donUrl error:nil] ;
-
 }
+
+//-(void)viewWillAppear:(BOOL)animated{
+//    
+//    // int型で取得
+//    sounds =[userDefaultSounds integerForKey:@"sound"];
+//    
+//    if(sounds == NO){
+//        buttonImg = [UIImage imageNamed:@"octagon_sound_on.png"];  // ボタンにする画像を生成する
+//        [soundButtonOFF setBackgroundImage:buttonImg forState:UIControlStateNormal];  // 画像をセットする
+//    }else{
+//        buttonImg = [UIImage imageNamed:@"octagon_sound_off.png"];  // ボタンにする画像を生成する
+//        [soundButtonOFF setBackgroundImage:buttonImg forState:UIControlStateNormal];  // 画像をセットする
+//    }
+//}
+
 
 -(void)sound:(UIButton *)button{
     
@@ -54,8 +76,10 @@
     
     //音がONになってたら押したときボリュームを０に。YESだったら逆。
     if (isSound == YES) {
-//        // Bool型で保存
-//        [userDefaultSounds setBool:YES forKey:nil];
+        // Bool型で保存
+        [userDefaultSounds setBool:NO forKey:@"sound"];
+        // 保存する
+        [userDefaultSounds synchronize];
         
         volume = 0;
         NSLog(@"オプションの画面で音量は...%d",volume);
@@ -69,8 +93,10 @@
         volume = 1;
         NSLog(@"オプションの画面で音量は...%d",volume);
         
-//        // Bool型で保存
-//        [userDefaultSounds setBool:NO forKey:nil];
+        // Bool型で保存
+        [userDefaultSounds setBool:YES forKey:@"sound"];
+        // 保存する
+        [userDefaultSounds synchronize];
         
         buttonImg = [UIImage imageNamed:@"octagon_sound_on.png"];  // ボタンにする画像を生成する
         [soundButtonOFF setBackgroundImage:buttonImg forState:UIControlStateNormal];  // 画像をセットする
