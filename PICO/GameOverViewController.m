@@ -220,6 +220,7 @@
     if ([GKLocalPlayer localPlayer].isAuthenticated ) {
         GKScore* score2 = [[GKScore alloc] initWithLeaderboardIdentifier:@"octagonjp"];
         score2.value = score;
+        NSLog(@"%d",score);
         [GKScore reportScores:@[score2] withCompletionHandler:^(NSError *error) {
             if (error) {
                 // エラーの場合

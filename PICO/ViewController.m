@@ -138,13 +138,17 @@
     if(isStart == YES){
         [self settingView];
         [self settingFirstView];
+        isStart = NO;
     }
     if(isGameOverFlag == YES){
         [self settingView];
         isGameOverFlag = NO;
     }
     if (isHome == YES) {
-        [self settingFirstView];
+        if (![firstView isDescendantOfView:self.view]) {
+            [self settingFirstView];
+        }
+        isHome = NO;
     }
 }
 
@@ -182,8 +186,7 @@
 }
 
 -(void)settingFirstView{
-    
-    if (isStart == YES || isHome == YES) {
+
         /*--最初の画面--*/
         firstView =[[UIImageView alloc] initWithFrame:CGRectMake (0,0,320,568)];
         firstView.image = [UIImage imageNamed:@"Noctagon_first.png"];
@@ -201,7 +204,6 @@
         [optionButton addTarget:self
                          action:@selector(hoge:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:optionButton];
-    }
 }
 
 
@@ -373,6 +375,7 @@
 
 -(void)gameOver:(NSNotification *)center{
     isGameOverFlag = YES;
+    isHome = NO;
 }
 
 -(void)receive:(NSNotification *)center
@@ -705,7 +708,8 @@
     
     OptionViewController *optionViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Option"];
     [self presentViewController:optionViewController animated:YES completion:nil];
-    optionViewController.delegate = self;  //オプションさんができないことはわしがやるよ。
+    optionViewController.delegate = self;
+    //オプションさんができないことはわしがやるよ。
     //オプションのビューにIDをつけて、移動する。オプションさんって言う人がいますよ。この人がオプションさんですよ。オプションさんにtびますよ。
 }
 
@@ -724,7 +728,6 @@
         }
     };
 }
-
 
 
 -(void)volume{
