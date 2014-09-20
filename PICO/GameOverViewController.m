@@ -66,12 +66,12 @@
     [[NSNotificationCenter defaultCenter] postNotification:sound];
 
      */
-    [self volume];[gooon play];
+    [self volume];
+    [gooon play];
     if (sounds == true) {
         [gooon play];
     }
    
-    
 }
 
 - (void) highScore{
@@ -80,17 +80,23 @@
     if (score > highScore){
         
         NSLog(@"ハイスコアが更新されたよ");
-        
         highScore = score;
-        
-        
         //high scoreの入れ物
         userDefaultsHighScore = [NSUserDefaults standardUserDefaults];
         // Int型で保存
         [userDefaultsHighScore setInteger:highScore forKey:@"HIGHSCORE"];
-        
         // 保存する
         [userDefaultsHighScore synchronize];
+
+//        //ハイスコアだったら、ハイスコアのラベルをぽんと大きくする
+//        [UIView animateWithDuration:3.0f animations:^ {
+//            //0.35秒かけてアニメーション。
+//            highScoreLabel.transform =CGAffineTransformMakeScale(1.5,1.5);
+//            highScoreImage.transform =CGAffineTransformMakeScale(1.5,1.5);//x方向に2倍拡大y方向に2拡大
+//        } completion:^(BOOL finished){
+//            //完了時のコールバック
+//        }];
+
     }
     highScoreLabel.text = [NSString stringWithFormat:@"%d",highScore];
 }
@@ -193,39 +199,36 @@
     
 }
 
-/**
- * GameCenterにログインしているか確認処理
- * ログインしていなければログイン画面を表示*/
-- (void)authenticateLocalPlayer
-{
-    GKLocalPlayer* player = [GKLocalPlayer localPlayer];
-    player.authenticateHandler = ^(UIViewController* ui, NSError* error )
-    {
-        if( nil != ui )
-        {
-            [self presentViewController:ui animated:YES completion:nil];
-        }
-    };
+- (IBAction)home{
+    
+    //gameoverになったことを通知
+    NSNotification *s = [NSNotification notificationWithName:@"gameOver" object:self userInfo:nil];
+    [[NSNotificationCenter defaultCenter] postNotification:s];
+
+    //最初のview欲しいよっていう通知を送っとく
+    NSNotification *home = [NSNotification notificationWithName:@"home" object:self userInfo:nil];
+    [[NSNotificationCenter defaultCenter] postNotification:home];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)signinToGameCenter{
-    //gamecenter 画面を読み込む
-    [self authenticateLocalPlayer];
+
+
+-(IBAction) showRanking{
     
     //if文でGameCenterにログインしているかどうか確認してログインしていればハイスコアを送信する
     if ([GKLocalPlayer localPlayer].isAuthenticated ) {
         GKScore* score2 = [[GKScore alloc] initWithLeaderboardIdentifier:@"octagonjp"];
-        score2.value = highScore;
+        score2.value = score;
         [GKScore reportScores:@[score2] withCompletionHandler:^(NSError *error) {
             if (error) {
                 // エラーの場合
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"失敗しました。" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                [alert show];
             }
         }];
     }
-}
-
--(IBAction) showRanking{
-        
+    
     GKGameCenterViewController *gcView = [GKGameCenterViewController new];
     if (gcView != nil)
     {
@@ -234,10 +237,8 @@
         [self presentViewController:gcView animated:YES completion:nil];
     }
 }
-/**
- * リーダーボードで完了タップ時の処理
- * 前の画面に戻る
- */
+
+/* リーダーボードで完了タップ時の処理。前の画面に戻る。*/
 - (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController
 {
     [self dismissViewControllerAnimated:YES completion:nil];

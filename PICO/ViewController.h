@@ -10,6 +10,7 @@
 #import "DMCrookedSwipeView.h"
 #import "OptionViewController.h"
 #import "GameOverViewController.h"
+#import <GameKit/GameKit.h>
 #define MARBLE_WIDTH 50
 #define MARBLE_HEIGHT 50
 
@@ -20,7 +21,7 @@
 //http://tryworks-design.com/?p=2260
 //webのカラーコードをiOS用に変換してくれる
 
-@interface ViewController : UIViewController <DMCrookedSwipeViewDelegate,OptionViewControllerDelegate> {
+@interface ViewController : UIViewController <DMCrookedSwipeViewDelegate,OptionViewControllerDelegate,GKGameCenterControllerDelegate> {
     //代わりにできるマンだよ
     
     IBOutlet UIImageView *octagon;
@@ -65,7 +66,6 @@
     int level;
     IBOutlet UILabel *lebelLabel;
     
-//    int volume;
     BOOL sounds; //optionで保存したBOOL
     
     /*
@@ -78,6 +78,7 @@
     BOOL isStart;          //アプリを起動して１回目のゲームなのか、二回以降なのか
     BOOL isGameOverFlag ;
     
+    BOOL isHome ;
 }
 
 
@@ -90,8 +91,8 @@
 //@property(nonatomic) int volume;
 
 
-@end
-@interface userDefaultSounds: NSUserDefaults;
-@property BOOL sounds;
+//@end
+//@interface userDefaultSounds: NSUserDefaults;
+//@property BOOL sounds;
 
 @end

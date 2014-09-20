@@ -17,34 +17,34 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lgp01a201403010300 のコピー.png" id="WXG-5j-6Qk">
-                                <rect key="frame" x="-2" y="48" width="442" height="236"/>
+                                <rect key="frame" x="3" y="62" width="442" height="236"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="octagon_button_Shadow.png" id="oVM-jX-zd7">
-                                <rect key="frame" x="15" y="396" width="298" height="105"/>
+                                <rect key="frame" x="15" y="405" width="298" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="octagon_button_Shadow.png" id="Qgl-AZ-MNe">
-                                <rect key="frame" x="11" y="282" width="298" height="105"/>
+                                <rect key="frame" x="11" y="291" width="298" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="octagon_gameover_purple.png" id="Yg7-xd-G8F">
-                                <rect key="frame" x="-28" y="93" width="248" height="132"/>
+                                <rect key="frame" x="-49" y="104" width="248" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shu_white.png" id="sBo-aV-HBt">
-                                <rect key="frame" x="106" y="148" width="68" height="34"/>
+                                <rect key="frame" x="82" y="153" width="68" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V5w-eH-upN">
-                                <rect key="frame" x="5" y="135" width="141" height="62"/>
+                                <rect key="frame" x="-15" y="141" width="141" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GeezaPro-Light" family="Geeza Pro" pointSize="47"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Light" family="Geeza Pro" pointSize="42"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ia2-Jh-RdM">
-                                <rect key="frame" x="11" y="282" width="288" height="95"/>
+                                <rect key="frame" x="11" y="291" width="288" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.23921570181846619" green="0.38823533058166504" blue="0.61568629741668701" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="35"/>
@@ -56,7 +56,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IO3-ej-1pG">
-                                <rect key="frame" x="15" y="396" width="288" height="95"/>
+                                <rect key="frame" x="15" y="405" width="288" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.39215689897537231" green="0.72156864404678345" blue="0.729411780834198" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="35"/>
@@ -69,41 +69,45 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5rK-0z-CQL">
-                                <rect key="frame" x="11" y="36" width="46" height="30"/>
+                                <rect key="frame" x="20" y="13" width="82" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="gamecenter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="showRanking" destination="0SR-6o-W9T" eventType="touchUpInside" id="ijh-Hs-vZy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TFh-7P-DQZ">
-                                <rect key="frame" x="74" y="36" width="45" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="octagon_gameover_purple.png" id="daB-qe-GBo">
+                                <rect key="frame" x="84" y="208" width="142" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="sign in">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="signinToGameCenter" destination="0SR-6o-W9T" eventType="touchUpInside" id="7ag-My-jsW"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO HIGH SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m9H-2w-Rrn">
-                                <rect key="frame" x="28" y="233" width="136" height="41"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m9H-2w-Rrn">
+                                <rect key="frame" x="86" y="223" width="136" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.364705890417099" green="0.0039215688593685627" blue="0.49411767721176147" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" name="GeezaPro-Light" family="Geeza Pro" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Light" family="Geeza Pro" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hy8-Cm-HXO">
+                                <rect key="frame" x="36" y="51" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="home">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="home" destination="0SR-6o-W9T" eventType="touchUpInside" id="BS6-Lp-JDe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="gameScoreLabel" destination="V5w-eH-upN" id="MAx-xK-nic"/>
+                        <outlet property="highScoreImage" destination="daB-qe-GBo" id="fbQ-Aa-ke9"/>
                         <outlet property="highScoreLabel" destination="m9H-2w-Rrn" id="fPd-SV-YJQ"/>
                     </connections>
                 </viewController>

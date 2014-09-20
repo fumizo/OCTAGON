@@ -26,7 +26,9 @@
 {
     [super viewDidLoad];
     
-    
+    //gamecenterサインイン
+    [self authenticateLocalPlayer];
+
     [self volume];
     
     //[self tutorial]; //チュートリアル
@@ -76,6 +78,9 @@
     
     NSNotificationCenter *nc2 = [NSNotificationCenter defaultCenter];
     [nc2 addObserver:self selector:@selector(gameOver:) name:@"gameOver" object:nil];
+
+    NSNotificationCenter *nc3 = [NSNotificationCenter defaultCenter];
+    [nc3 addObserver:self selector:@selector(home:) name:@"home" object:nil];
     
     /*---timer---*/
     // timer = [NSTimer scheduledTimerW:；bcithTimeInterval:0.01 target:self selector:@selector(up) userInfo:nil repeats:YES];
@@ -85,7 +90,6 @@
     [tirin play];
     
     isStart = YES;
-
 }
 
 /*==チュートリアル==*/
@@ -139,8 +143,9 @@
         [self settingView];
         isGameOverFlag = NO;
     }
-    
-    
+    if (isHome == YES) {
+        [self settingFirstView];
+    }
 }
 
 -(void)settingView{
@@ -172,9 +177,13 @@
 
 }
 
+-(void)home:(NSNotification *)center{
+    isHome = YES;
+}
+
 -(void)settingFirstView{
     
-    if (isStart == YES) {
+    if (isStart == YES || isHome == YES) {
         /*--最初の画面--*/
         firstView =[[UIImageView alloc] initWithFrame:CGRectMake (0,0,320,568)];
         firstView.image = [UIImage imageNamed:@"Noctagon_first.png"];
@@ -418,19 +427,17 @@
 }
 
 
-//タップで消す
+//はじめの画面をタップで消す
 - (void)addTapToReturn {
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doReturn:)];
     [self.view addGestureRecognizer:tap];
 }
 - (void)doReturn:(UITapGestureRecognizer *)tap {
     
-    //if(gameStatusFlag == 0) gameStatusFlag = 1;
-    
     [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
     [firstView removeFromSuperview];
     [optionButton removeFromSuperview];
-    isStart = NO;
+//    isStart = NO;
 }
 
 
@@ -532,7 +539,7 @@
 //        }
 //    }
 
-swipeView.alpha = 0.0;
+    swipeView.alpha = 0.0;
 }
 
 //scoreが増えるとレベルがあがる
@@ -555,7 +562,7 @@ swipeView.alpha = 0.0;
 /*----マーブル作る----*/
 - (void)makeLeftUpwordMaru{
     
-    [UIView animateWithDuration:0.4f delay:0.4f options:UIViewAnimationOptionCurveEaseIn animations:^ {
+    [UIView animateWithDuration:0.35f delay:0.4f options:UIViewAnimationOptionCurveEaseIn animations:^ {
         //１秒かけてアニメーション。0.5秒後からアニメーション
         //^と^の間はブロック構文！ブロック構文は、１回流れとは別に動かす構文！コールバックとセットのことが多いよ。流れからブロック！
         //アニメーションで変化させたい値を設定する（最終的に変更したい値）
@@ -591,7 +598,7 @@ swipeView.alpha = 0.0;
 
 - (void)makeRightUpwordMaru
 {
-    [UIView animateWithDuration:0.4f delay:0.4f options:UIViewAnimationOptionCurveEaseIn animations:^ {
+    [UIView animateWithDuration:0.35f delay:0.4f options:UIViewAnimationOptionCurveEaseIn animations:^ {
         //１秒かけてアニメーション。0.5秒後からアニメーション
         //^と^の間はブロック構文！ブロック構文は、１回流れとは別に動かす構文！コールバックとセットのことが多いよ。流れからブロック！
         //アニメーションで変化させたい値を設定する（最終的に変更したい値）
@@ -624,7 +631,7 @@ swipeView.alpha = 0.0;
 }
 
 - (void)makeLeftDownwordMaru{
-    [UIView animateWithDuration:0.4f delay:0.4f options:UIViewAnimationOptionCurveEaseIn animations:^ {
+    [UIView animateWithDuration:0.35f delay:0.4f options:UIViewAnimationOptionCurveEaseIn animations:^ {
         //１秒かけてアニメーション。0.5秒後からアニメーション
         //^と^の間はブロック構文！ブロック構文は、１回流れとは別に動かす構文！コールバックとセットのことが多いよ。流れからブロック！
         //アニメーションで変化させたい値を設定する（最終的に変更したい値）
@@ -659,7 +666,7 @@ swipeView.alpha = 0.0;
 
 - (void)makeRightDownwordMaru
 {
-    [UIView animateWithDuration:0.4f delay:0.4f options:UIViewAnimationOptionCurveEaseIn animations:^ {
+    [UIView animateWithDuration:0.35f delay:0.4f options:UIViewAnimationOptionCurveEaseIn animations:^ {
         //１秒かけてアニメーション。0.5秒後からアニメーション
         //^と^の間はブロック構文！ブロック構文は、１回流れとは別に動かす構文！コールバックとセットのことが多いよ。流れからブロック！
         //アニメーションで変化させたい値を設定する（最終的に変更したい値）
@@ -702,12 +709,25 @@ swipeView.alpha = 0.0;
     //オプションのビューにIDをつけて、移動する。オプションさんって言う人がいますよ。この人がオプションさんですよ。オプションさんにtびますよ。
 }
 
+/*==== game center ====*/
+
+/*GameCenterにログインしているか確認処理
+ * ログインしていなければログイン画面を表示*/
+- (void)authenticateLocalPlayer
+{
+    GKLocalPlayer* player = [GKLocalPlayer localPlayer];
+    player.authenticateHandler = ^(UIViewController* ui, NSError* error )
+    {
+        if( nil != ui )
+        {
+            [self presentViewController:ui animated:YES completion:nil];
+        }
+    };
+}
+
+
 
 -(void)volume{
-    NSUserDefaults *userDefaultSounds= [NSUserDefaults standardUserDefaults];
-    
-    // BOOL型で取得
-    sounds = [userDefaultSounds boolForKey:@"sound"];
 
     if(sounds == YES){
         tirin.volume *= 1;
@@ -721,6 +741,26 @@ swipeView.alpha = 0.0;
         dodon.volume *= 0;
         pon.volume *= 0;
         kan.volume *= 0;
+    }
+    
+    NSUserDefaults *userDefaultSounds= [NSUserDefaults standardUserDefaults];
+    
+    // BOOL型で取得
+    sounds = [userDefaultSounds boolForKey:@"sound"];
+    NSLog(@"ゲーム画面でvolume is...%d",sounds);
+    
+    if(sounds == YES){
+        tirin.volume = 1;
+        don.volume = 1;
+        dodon.volume = 1;
+        pon.volume = 1;
+        kan.volume = 1;
+    }else{
+        tirin.volume = 0;
+        don.volume = 0;
+        dodon.volume = 0;
+        pon.volume = 0;
+        kan.volume = 0;
     }
 }
 

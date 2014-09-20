@@ -35,6 +35,7 @@
     NSString *coment;
     
     IBOutlet UILabel *highScoreLabel;
+    IBOutlet UIImageView *highScoreImage;
     
     BOOL sounds; //optionで保存したBOOL
 
@@ -45,7 +46,7 @@
 
 - (IBAction)twitter ;
 - (IBAction)showRanking;
-- (IBAction)signinToGameCenter;
+- (IBAction)home;
 
 @property(nonatomic) int score;
 @property(nonatomic) int level;
