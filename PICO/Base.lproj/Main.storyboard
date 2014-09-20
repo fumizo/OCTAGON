@@ -17,34 +17,34 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lgp01a201403010300 のコピー.png" id="WXG-5j-6Qk">
-                                <rect key="frame" x="3" y="62" width="442" height="236"/>
+                                <rect key="frame" x="3" y="22" width="442" height="236"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="octagon_button_Shadow.png" id="oVM-jX-zd7">
-                                <rect key="frame" x="15" y="405" width="298" height="105"/>
+                                <rect key="frame" x="15" y="361" width="298" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="octagon_button_Shadow.png" id="Qgl-AZ-MNe">
-                                <rect key="frame" x="11" y="291" width="298" height="105"/>
+                                <rect key="frame" x="11" y="251" width="298" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="octagon_gameover_purple.png" id="Yg7-xd-G8F">
-                                <rect key="frame" x="-49" y="104" width="248" height="132"/>
+                                <rect key="frame" x="-48" y="64" width="248" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shu_white.png" id="sBo-aV-HBt">
-                                <rect key="frame" x="82" y="153" width="68" height="34"/>
+                                <rect key="frame" x="82" y="113" width="68" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V5w-eH-upN">
-                                <rect key="frame" x="-15" y="141" width="141" height="62"/>
+                                <rect key="frame" x="-15" y="99" width="141" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GeezaPro-Light" family="Geeza Pro" pointSize="42"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ia2-Jh-RdM">
-                                <rect key="frame" x="11" y="291" width="288" height="95"/>
+                                <rect key="frame" x="11" y="251" width="288" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.23921570181846619" green="0.38823533058166504" blue="0.61568629741668701" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="35"/>
@@ -56,11 +56,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IO3-ej-1pG">
-                                <rect key="frame" x="15" y="405" width="288" height="95"/>
+                                <rect key="frame" x="15" y="361" width="288" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.39215689897537231" green="0.72156864404678345" blue="0.729411780834198" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="35"/>
-                                <state key="normal" title="BACK TO START">
+                                <state key="normal" title="BACK TO GAME">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -69,7 +69,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5rK-0z-CQL">
-                                <rect key="frame" x="20" y="13" width="82" height="30"/>
+                                <rect key="frame" x="221" y="507" width="82" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="gamecenter">
@@ -80,21 +80,20 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="octagon_gameover_purple.png" id="daB-qe-GBo">
-                                <rect key="frame" x="84" y="208" width="142" height="75"/>
+                                <rect key="frame" x="84" y="168" width="142" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m9H-2w-Rrn">
-                                <rect key="frame" x="86" y="223" width="136" height="46"/>
+                                <rect key="frame" x="86" y="183" width="136" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GeezaPro-Light" family="Geeza Pro" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hy8-Cm-HXO">
-                                <rect key="frame" x="36" y="51" width="39" height="30"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hy8-Cm-HXO">
+                                <rect key="frame" x="130" y="489" width="70" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="home">
+                                <state key="normal" backgroundImage="home.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -228,7 +227,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="octagon_hantoumei.png" id="d45-BW-nEo">
-                                <rect key="frame" x="13" y="237" width="288" height="105"/>
+                                <rect key="frame" x="13" y="237" width="288" height="137"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOUND" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CAa-Ym-Gwe">
@@ -244,12 +243,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="kZi-4i-SSk">
-                                <rect key="frame" x="13" y="237" width="288" height="128"/>
+                                <rect key="frame" x="13" y="237" width="288" height="137"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">  同じ色の角に丸をスワイプ！
-  間違えてもOK！
-  タイマーの時間内に
-  しゅっとしなければGAMEOVER</string>
+                                <string key="text">同じ色の角に丸をスワイプ！
+間違えてもOK！
+タイマーは丸をスワイプするとリセット。
+右上のタイマーの時間内にしゅっとできなければゲームオーバー！</string>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -282,6 +281,7 @@
     </scenes>
     <resources>
         <image name="Noctagon_first.png" width="640" height="1136"/>
+        <image name="home.png" width="169" height="155"/>
         <image name="kumo.png" width="1680" height="1456"/>
         <image name="lgp01a201403010300 のコピー.png" width="694" height="1024"/>
         <image name="octagon_button_Shadow.png" width="308" height="108"/>
