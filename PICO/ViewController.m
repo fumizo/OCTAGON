@@ -707,15 +707,15 @@ swipeView.alpha = 0.0;
     NSUserDefaults *userDefaultSounds= [NSUserDefaults standardUserDefaults];
     
     // BOOL型で取得
-    isSound = [userDefaultSounds boolForKey:@"sound"];
+    sounds = [userDefaultSounds boolForKey:@"sound"];
 
-    if(isSound == YES){
+    if(sounds == YES){
         tirin.volume *= 1;
         don.volume *= 1;
         dodon.volume *= 1;
         pon.volume *= 1;
         kan.volume *= 1;
-    }else{
+    }else if(sounds == NO){
         tirin.volume *= 0;
         don.volume *= 0;
         dodon.volume *= 0;

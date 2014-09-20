@@ -65,8 +65,8 @@
     int level;
     IBOutlet UILabel *lebelLabel;
     
-    int volume;
-    BOOL isSound; //optionで保存したBOOL
+//    int volume;
+    BOOL sounds; //optionで保存したBOOL
     
     /*
     ゲームオーバーになったよっていうのをback to startで通知してゲームオーバーになったらisgameoverフラグをyesにして、１回丸をつくったらまたnoにして、
