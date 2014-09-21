@@ -78,7 +78,17 @@
     }
     
 
-   
+    /*--ゲームセンターのボタン--*/
+    //生成
+    gamecenterButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *img = [UIImage imageNamed:@"king2.png"];  // ボタンにする画像を生成する
+    gamecenterButton.frame = CGRectMake(43, 19, 66, 52);
+    [gamecenterButton setBackgroundImage:img forState:UIControlStateNormal];  // 画像をセットする
+    // ボタンが押された時にhogeメソッドを呼び出す
+    [gamecenterButton addTarget:self
+                     action:@selector(authenticateLocalPlayer:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:gamecenterButton];
+    
 }
 
 - (void) highScore{
@@ -227,9 +237,6 @@
 
 -(void) showRanking{
     
-    
-    [self authenticateLocalPlayer];
-    
     //if文でGameCenterにログインしているかどうか確認してログインしていればハイスコアを送信する
     if ([GKLocalPlayer localPlayer].isAuthenticated ) {
         GKScore* score2 = [[GKScore alloc] initWithLeaderboardIdentifier:@"octagonjp"];
@@ -263,7 +270,7 @@
 
 /*GameCenterにログインしているか確認処理
  * ログインしていなければログイン画面を表示*/
- - (void)authenticateLocalPlayer
+ -(void)authenticateLocalPlayer:(UIButton*)button
  {
  GKLocalPlayer* player = [GKLocalPlayer localPlayer];
  player.authenticateHandler = ^(UIViewController* ui, NSError* error )
@@ -273,6 +280,8 @@
  [self presentViewController:ui animated:YES completion:nil];
  }
  };
+     [self showRanking];
+     
  }
 
 

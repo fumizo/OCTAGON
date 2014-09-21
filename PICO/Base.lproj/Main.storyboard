@@ -89,16 +89,6 @@
                                     <action selector="home" destination="0SR-6o-W9T" eventType="touchUpInside" id="BS6-Lp-JDe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5rK-0z-CQL">
-                                <rect key="frame" x="43" y="19" width="66" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="king2.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="showRanking" destination="0SR-6o-W9T" eventType="touchUpInside" id="ijh-Hs-vZy"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -281,7 +271,6 @@
     <resources>
         <image name="Noctagon_first.png" width="640" height="1136"/>
         <image name="home.png" width="169" height="155"/>
-        <image name="king2.png" width="240" height="188"/>
         <image name="kumo.png" width="1680" height="1456"/>
         <image name="lgp01a201403010300 のコピー.png" width="694" height="1024"/>
         <image name="octagon_button_Shadow.png" width="308" height="108"/>

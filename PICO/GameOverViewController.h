@@ -38,6 +38,7 @@
     IBOutlet UIImageView *highScoreImage;
     
     BOOL sounds; //optionで保存したBOOL
+    UIButton *gamecenterButton;
 
 }
 
