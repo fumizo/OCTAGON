@@ -37,6 +37,11 @@
     [super viewDidLoad];
     [self volume]; //音
     
+    if(score > highScore){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"congratulation!!" message:@"王冠をタップしてハイスコアをゲームセンターに登録しよう！" delegate:nil cancelButtonTitle:@"OK!" otherButtonTitles: nil];
+        [alert show];
+    }
+    
     // Do any additional setup after loading the view.
     NSLog(@"受け渡されたscoreは%d",score);
     NSLog(@"level is %d幕",level);
@@ -71,6 +76,8 @@
     if (sounds == true) {
         [gooon play];
     }
+    
+
    
 }
 
@@ -96,6 +103,10 @@
 //        } completion:^(BOOL finished){
 //            //完了時のコールバック
 //        }];
+        
+        
+        //game centerに登録
+        [self showRanking];
 
     }
     highScoreLabel.text = [NSString stringWithFormat:@"%d",highScore];
@@ -214,7 +225,10 @@
 
 
 
--(IBAction) showRanking{
+-(void) showRanking{
+    
+    
+    [self authenticateLocalPlayer];
     
     //if文でGameCenterにログインしているかどうか確認してログインしていればハイスコアを送信する
     if ([GKLocalPlayer localPlayer].isAuthenticated ) {
@@ -237,6 +251,8 @@
         gcView.viewState = GKGameCenterViewControllerStateLeaderboards;
         [self presentViewController:gcView animated:YES completion:nil];
     }
+    
+    
 }
 
 /* リーダーボードで完了タップ時の処理。前の画面に戻る。*/
@@ -244,6 +260,21 @@
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+/*GameCenterにログインしているか確認処理
+ * ログインしていなければログイン画面を表示*/
+ - (void)authenticateLocalPlayer
+ {
+ GKLocalPlayer* player = [GKLocalPlayer localPlayer];
+ player.authenticateHandler = ^(UIViewController* ui, NSError* error )
+ {
+ if( nil != ui )
+ {
+ [self presentViewController:ui animated:YES completion:nil];
+ }
+ };
+ }
+
 
 
 

@@ -27,7 +27,7 @@
     [super viewDidLoad];
     
     //gamecenterサインイン
-    [self authenticateLocalPlayer];
+    //[self authenticateLocalPlayer];
 
     [self volume];
     
@@ -148,6 +148,7 @@
         if (![firstView isDescendantOfView:self.view]) {
             [self settingFirstView];
         }
+
         isHome = NO;
     }
 }
@@ -717,6 +718,7 @@
 
 /*GameCenterにログインしているか確認処理
  * ログインしていなければログイン画面を表示*/
+/*
 - (void)authenticateLocalPlayer
 {
     GKLocalPlayer* player = [GKLocalPlayer localPlayer];
@@ -728,6 +730,7 @@
         }
     };
 }
+ */
 
 
 -(void)volume{

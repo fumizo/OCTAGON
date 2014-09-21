@@ -45,7 +45,7 @@
 -(IBAction)backToStart ;
 
 - (IBAction)twitter ;
-- (IBAction)showRanking;
+//- (IBAction)showRanking;
 - (IBAction)home;
 
 @property(nonatomic) int score;

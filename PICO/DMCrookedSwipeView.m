@@ -129,7 +129,6 @@
 /*このクラスはUIImageView(丸たち)のクラスなので、合っているか間違っているかを、ここで判定して
  UIViewControllerのほうのクラスに通知しています。*/
 
-
 - (void)swipeRight:(UISwipeGestureRecognizer *)sender
 {
     
@@ -232,8 +231,6 @@
     if([_objestColor isEqual:@"green"]){
         
         torf = 1;
-        
-        
         //間違ってたら０、合ってたら１を通知する
         //合ってたよっていう通知を送る
         NSNotification *s = [NSNotification notificationWithName:@"hoge" object:self userInfo:@{@"score": @"1"}];
@@ -278,7 +275,6 @@
     /* ジェスチャーの同時認識を可能に */
     return YES;
 }
-
 
 
 - (void)moveMarbles:(NSTimer *)timer

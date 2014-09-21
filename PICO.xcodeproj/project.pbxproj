@@ -89,6 +89,8 @@
 		4FAD09C319C9B93300BC2854 /* NmarumaruPink.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FAD09BF19C9B93300BC2854 /* NmarumaruPink.png */; };
 		4FAD09C419C9B93300BC2854 /* NmarumaruYellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FAD09C019C9B93300BC2854 /* NmarumaruYellow.png */; };
 		4FAD09C619C9B96900BC2854 /* octagon_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FAD09C519C9B96900BC2854 /* octagon_board.png */; };
+		4FC3A65019CEF1CF00DFED90 /* king.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FC3A64F19CEF1CF00DFED90 /* king.png */; };
+		4FC3A65219CEF43C00DFED90 /* king2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FC3A65119CEF43C00DFED90 /* king2.png */; };
 		4FC7E85C19669E8C0069A919 /* OptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC7E85B19669E8C0069A919 /* OptionViewController.m */; };
 		4FD6C17D19C9C8CB00EB9704 /* HeaderImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD6C17C19C9C8CB00EB9704 /* HeaderImage.png */; };
 		4FD6C17F19C9C8E200EB9704 /* ForkImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD6C17E19C9C8E200EB9704 /* ForkImage.png */; };
@@ -195,6 +197,8 @@
 		4FAD09BF19C9B93300BC2854 /* NmarumaruPink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NmarumaruPink.png; sourceTree = "<group>"; };
 		4FAD09C019C9B93300BC2854 /* NmarumaruYellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NmarumaruYellow.png; sourceTree = "<group>"; };
 		4FAD09C519C9B96900BC2854 /* octagon_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = octagon_board.png; sourceTree = "<group>"; };
+		4FC3A64F19CEF1CF00DFED90 /* king.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = king.png; sourceTree = "<group>"; };
+		4FC3A65119CEF43C00DFED90 /* king2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = king2.png; sourceTree = "<group>"; };
 		4FC7E85019659E2E0069A919 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4FC7E85A19669E8C0069A919 /* OptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionViewController.h; sourceTree = "<group>"; };
 		4FC7E85B19669E8C0069A919 /* OptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionViewController.m; sourceTree = "<group>"; };
@@ -330,6 +334,8 @@
 		4F9F7320195D73290082669D = {
 			isa = PBXGroup;
 			children = (
+				4FC3A65119CEF43C00DFED90 /* king2.png */,
+				4FC3A64F19CEF1CF00DFED90 /* king.png */,
 				4F80039319CDC9640066DA74 /* home.png */,
 				4FD6C18019C9E95100EB9704 /* TestPanel3.xib */,
 				4FD6C17E19C9C8E200EB9704 /* ForkImage.png */,
@@ -525,6 +531,7 @@
 				4F80039419CDC9640066DA74 /* home.png in Resources */,
 				4F8C4C98199C9B8800C375F4 /* lgp01a201304160100 のコピー.png in Resources */,
 				4F9F7345195D73290082669D /* Images.xcassets in Resources */,
+				4FC3A65219CEF43C00DFED90 /* king2.png in Resources */,
 				4F8C4C97199C9B8800C375F4 /* lgp01a201304151900.jpg in Resources */,
 				4F3C85871986242200E843AC /* Noctagon_first.png in Resources */,
 				4FAD09C319C9B93300BC2854 /* NmarumaruPink.png in Resources */,
@@ -556,6 +563,7 @@
 				4F8C4CB3199D9DE900C375F4 /* 旧icon.png in Resources */,
 				4FAD09C419C9B93300BC2854 /* NmarumaruYellow.png in Resources */,
 				4F8C4CA8199C9B8800C375F4 /* tori のコピー.png in Resources */,
+				4FC3A65019CEF1CF00DFED90 /* king.png in Resources */,
 				4F8C4C92199C9B8800C375F4 /* lgp01a201304151300 のコピー.png in Resources */,
 				4F9F7340195D73290082669D /* Main.storyboard in Resources */,
 				4F1892ED19AA6539009B15D0 /* pon01.mp3 in Resources */,
@@ -735,8 +743,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Mariko Yamamoto (2EGT4SM44X)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mariko Yamamoto (2EGT4SM44X)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -745,7 +753,7 @@
 				GCC_PREFIX_HEADER = "PICO/PICO-Prefix.pch";
 				INFOPLIST_FILE = "PICO/PICO-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6ada31ac-57e3-477b-bc1f-92a287d2661d";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = PICO;
 			};
 			name = Debug;
@@ -754,8 +762,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Mariko Yamamoto (2EGT4SM44X)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mariko Yamamoto (2EGT4SM44X)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -764,7 +772,7 @@
 				GCC_PREFIX_HEADER = "PICO/PICO-Prefix.pch";
 				INFOPLIST_FILE = "PICO/PICO-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6ada31ac-57e3-477b-bc1f-92a287d2661d";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = PICO;
 			};
 			name = Release;
