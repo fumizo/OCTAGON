@@ -37,11 +37,6 @@
     [super viewDidLoad];
     [self volume]; //音
     
-    if(score > highScore){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"congratulation!!" message:@"王冠をタップしてハイスコアをゲームセンターに登録しよう！" delegate:nil cancelButtonTitle:@"OK!" otherButtonTitles: nil];
-        [alert show];
-    }
-    
     // Do any additional setup after loading the view.
     NSLog(@"受け渡されたscoreは%d",score);
     NSLog(@"level is %d幕",level);
@@ -78,6 +73,9 @@
     }
     
 
+}
+
+- (void)makeGamecenterButton{
     /*--ゲームセンターのボタン--*/
     //生成
     gamecenterButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -86,15 +84,21 @@
     [gamecenterButton setBackgroundImage:img forState:UIControlStateNormal];  // 画像をセットする
     // ボタンが押された時にhogeメソッドを呼び出す
     [gamecenterButton addTarget:self
-                     action:@selector(authenticateLocalPlayer:) forControlEvents:UIControlEventTouchUpInside];
+                         action:@selector(authenticateLocalPlayer:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:gamecenterButton];
-    
+
 }
 
 - (void) highScore{
     
     //スコアが今までのハイスコアよりも大きかったら、ハイスコアに保存する。
     if (score > highScore){
+        
+        [self makeGamecenterButton];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"congratulation!!" message:@"王冠をタップしてハイスコアをゲームセンターに登録しよう！" delegate:nil cancelButtonTitle:@"OK!" otherButtonTitles: nil];
+        [alert show];
+        
         
         NSLog(@"ハイスコアが更新されたよ");
         highScore = score;
