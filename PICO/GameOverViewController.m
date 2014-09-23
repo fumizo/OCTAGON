@@ -134,22 +134,22 @@
     NSLog(@"high score is...%d",highScore);
     [self highScore];
     
-    
+    /*
     if (score < 10 ) {
     }else if (score >= 10 && score <=20) {
-        coment = @"";
+        coment = @"ふっ";
     }else if (score >= 20 && score <= 30){
-        coment = @"";
+        coment = @"まだまだじゃ";
     }else if (score >= 30 && score <= 45){
-        coment = @"";
+        coment = @"ほう...";
     }else if (score >= 45 && score <= 65){
-        coment = @"";
+        coment = @"ほほう！！";
     }else if (score >= 85 && score <= 100){
-        coment = @"";
+        coment = @"よいよい！よいぞ！";
     }else if(score >= 100){
-        coment = @"";
+        coment = @"ファンタスティック素晴らしい！！！！";
     }
-
+     */
 }
 
 - (void)volume{
@@ -188,7 +188,7 @@
     [flee play];
     
     //    キャプチャする範囲の指定
-    CGRect rect = CGRectMake(0, 287, 320, 226);
+    CGRect rect = CGRectMake(0, 0, 320, 251);
     
     UIGraphicsBeginImageContext(rect.size);
     
@@ -203,8 +203,11 @@
 
     
     SLComposeViewController *twitterPostVC = [ SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+//    //投稿する文章
+//    [twitterPostVC setInitialText:[NSString stringWithFormat:@"I WAS %dしゅ! #OCTAGON_JP \n %@ \n https://itunes.apple.com/jp/app/octagon-wanwo-shi-fenkerushuttingugemu/id913077665?mt=8",score,coment]];
+//    [twitterPostVC addImage:capture];
     //投稿する文章
-    [twitterPostVC setInitialText:[NSString stringWithFormat:@"I WAS %dしゅ! #OCTAGON_JP \n %@ \n https://itunes.apple.com/jp/app/octagon-wanwo-shi-fenkerushuttingugemu/id913077665?mt=8",score,coment]];
+    [twitterPostVC setInitialText:[NSString stringWithFormat:@"I WAS %dしゅ! #OCTAGON_JP  \n https://itunes.apple.com/jp/app/octagon-wanwo-shi-fenkerushuttingugemu/id913077665?mt=8",score]];
     [twitterPostVC addImage:capture];
 
     //アラート
